@@ -4,6 +4,9 @@ class Character:
     dmg = 1
     defen = 0
 
+    def is_alive(self):
+        return self.hp > 0
+
     # Конструктор
     def __init__(self, name="", hp=100, dmg=1, defen=0):
         self.name = name
@@ -26,11 +29,7 @@ class Character:
 
     def set_name(self, new_name):
         self.name = new_name
-    def is_alive(self):
-        hp = self.hp
-        if hp > 0:
-            return True
-        else:
-            return False
+
+
 
 
